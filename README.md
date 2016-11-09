@@ -9,7 +9,7 @@ Purpose:
 1. Enter or load text from a plain text file (.txt) or a rich text file (.rtf).
 2. Enter a password in the password field.
 3. Press 'ENCRYPT' once to convert the integer charset values of the text in the text area.
-4. Repeat step 2 and 3 to apply multiple layers of encryption.
+4. Repeat step 2 and 3 to apply multiple layers of encryption. Or simply just step 3.
 
 Notes:
 
