@@ -10,6 +10,7 @@ Purpose:
 2. Enter a password in the password field.
 3. Press 'ENCRYPT' once to convert the integer charset values of the text in the text area.
 4. Repeat step 2 and 3 to apply multiple layers of encryption. Or simply just step 3.
+5. Decrypt the text with the appropritate passwords in the reverse order.
 
 Notes:
 
