@@ -25,8 +25,8 @@ Button Functions:
 - 'CLEAR': Resets the program and clears all variables.
 - 'RELOAD FILE': restores the file to its initial state, in case of wrong decryption password.
 
-Operating systems:
+OS specific issues:
 
 - OSX: No known issues.
-- Linux: no known issues.
+- Linux: No known issues.
 - Windows: Windows notepad will not acknowledge carriage returns of files saved with the program. Instead, use wordpad.
