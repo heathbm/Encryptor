@@ -11,7 +11,7 @@
    <children>
       <Pane prefHeight="31.0" style="-fx-background-color: gray;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
-            <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="31.0" prefWidth="1000.0" text="HBM ENCRYPTOR 1.0" textAlignment="CENTER" textFill="WHITE" />
+            <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="31.0" prefWidth="1000.0" text="HBM ENCRYPTOR ADVANCED AES" textAlignment="CENTER" textFill="WHITE" />
             <MenuBar prefHeight="31.0" prefWidth="150.0" style="-fx-background-color: gray;" styleClass="application.css">
               <menus>
                 <Menu mnemonicParsing="false" style="-fx-text-fill: white;" text="File">

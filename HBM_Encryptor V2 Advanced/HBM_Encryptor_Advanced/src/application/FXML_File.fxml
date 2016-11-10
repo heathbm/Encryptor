@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.BorderPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1005.0" prefWidth="1002.0" style="-fx-background-color: lightgrey;" xmlns="http://javafx.com/javafx/8.0.40" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.Controller">
+   <children>
+      <Pane prefHeight="31.0" style="-fx-background-color: gray;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="31.0" prefWidth="1000.0" text="HBM ENCRYPTOR ADVANCED" textAlignment="CENTER" textFill="WHITE" />
+            <MenuBar prefHeight="31.0" prefWidth="150.0" style="-fx-background-color: gray;" styleClass="application.css">
+              <menus>
+                <Menu mnemonicParsing="false" style="-fx-text-fill: white;" text="File">
+                  <items>
+                    <MenuItem mnemonicParsing="false" onAction="#menuOpenFunc" text="Open File" />
+                        <MenuItem mnemonicParsing="false" onAction="#menuSaveAsFunc" text="Save As" />
+                        <MenuItem mnemonicParsing="false" onAction="#menuSaveFunc" text="Save" />
+                  </items>
+                </Menu>
+              </menus>
+            </MenuBar>
+         </children>
+      </Pane>
+      <TextArea fx:id="textField" layoutX="12.0" layoutY="97.0" onKeyReleased="#fileBoolFunc" prefHeight="782.0" prefWidth="980.0" promptText="ENTER TEXT OR LOAD A FILE" wrapText="true" AnchorPane.bottomAnchor="126.0" AnchorPane.leftAnchor="11.0" AnchorPane.rightAnchor="11.0" AnchorPane.topAnchor="42.0" />
+      <Pane layoutX="1.0" layoutY="885.0" prefHeight="115.0" prefWidth="1000.0" style="-fx-background-color: grey;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+         <children>
+            <Button fx:id="fileButton" layoutX="599.0" layoutY="63.0" mnemonicParsing="false" onAction="#fileFunc" prefHeight="27.0" prefWidth="175.0" text="OPEN" />
+            <Button fx:id="encryptButton" layoutX="231.0" layoutY="63.0" mnemonicParsing="false" onAction="#encryptFunc" prefHeight="27.0" prefWidth="175.0" text="ENCRYPT" />
+            <TextField fx:id="passwordField" alignment="CENTER" layoutX="231.0" layoutY="20.0" prefHeight="27.0" prefWidth="360.0" promptText="PASSWORD" />
+            <Button fx:id="decryptButton" layoutX="415.0" layoutY="63.0" mnemonicParsing="false" onAction="#decryptFunc" prefHeight="27.0" prefWidth="175.0" text="DECRYPT" />
+            <ImageView fitHeight="86.0" fitWidth="103.0" layoutX="133.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@biglogo_small.png" />
+               </image>
+            </ImageView>
+            <Button fx:id="restoreButton" layoutX="599.0" layoutY="20.0" mnemonicParsing="false" onAction="#restoreFunc" prefHeight="27.0" prefWidth="175.0" text="RELOAD FILE" />
+            <Button fx:id="clearButton" layoutX="783.0" layoutY="20.0" mnemonicParsing="false" onAction="#clearFunc" prefHeight="70.0" prefWidth="91.0" text="CLEAR" />
+         </children>
+      </Pane>
+      <Pane fx:id="maxView" layoutX="326.0" layoutY="379.0" opacity="0.0" prefHeight="179.0" prefWidth="368.0" style="-fx-background-color: gray;">
+         <children>
+            <Button fx:id="maxButton" layoutX="104.0" layoutY="95.0" mnemonicParsing="false" onAction="#clearMaxFunc" prefHeight="49.0" prefWidth="164.0" style="-fx-background-color: lightgray;" text="CONTINUE" />
+            <Label fx:id="maxLbl" alignment="CENTER" contentDisplay="CENTER" layoutX="-2.0" layoutY="23.0" prefHeight="65.0" prefWidth="374.0" text="MAXIMUM ENCRYPTION APPLIED" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font size="19.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

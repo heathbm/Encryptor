@@ -180,7 +180,6 @@ public class Controller {
 				for (int i = 0; i < currentText.length(); i++) {
 
 					int c = (int) currentText.charAt(i) + passwordValue.get(passInc);
-					System.out.println("value:" + c);
 					temp.append((char) c);
 
 					passInc++;
