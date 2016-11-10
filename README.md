@@ -6,7 +6,7 @@ V1 Lightweight: A cyclic pattern is applied with a shift cipher to each characte
 
 V2 Advanced: A cyclic pattern is applied with a shift cipher to each character individually. The pattern is the size of the password times 3.
 
-V3 AES: The plain text is enciphered with the AES algorithm in ECB mode at 128bit encryption.
+V3 AES: Plain text is enciphered with the AES algorithm in ECB mode at 128bit encryption.
 
 ---------------------------------------------------------------------
 
