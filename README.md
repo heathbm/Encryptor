@@ -1,6 +1,6 @@
 # Encryptor
 
-A GUI charset encryptor created with JavaFX using FXML and Java SE 8.
+A GUI text encryptor created with JavaFX using FXML and Java SE 8.
 
 V1 Lightweight: A cyclic pattern is applied with a shift cypher to each character individually. The pattern is the size of the password.
 
