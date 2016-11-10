@@ -67,7 +67,6 @@ public class Controller {
 
 	List<Integer> passwordValue = new ArrayList<Integer>();
 	int currentCharValue = 0;
-	String currentText = "";
 	String firstText = "";
 	File currentFile;
 	boolean filePresent = false;
@@ -117,21 +116,8 @@ public class Controller {
 	public void savePassword() {
 		if (!passwordField.getText().isEmpty()) {
 
-			currentText = textField.getText();
-			passwordValue.clear();
 			String password = passwordField.getText();
-			int passLength = password.length();
-			int index = 0;
 			
-			for (int i = 0; i < passLength * 3; i++) {
-				
-				int charValue = (int) password.charAt(index) + (i - index) + index;
-				passwordValue.add(charValue);
-				index++;
-				if(index == passLength) {
-					index = 0;
-				}
-			}
 		}
 	}
 
@@ -147,30 +133,12 @@ public class Controller {
 	}
 
 	public void decryptFunc() throws Exception {
-
-		if (canDecrypt() == true) {
 						
-			savePassword();
+			savePassword(); // here
 
-			StringBuilder temp = new StringBuilder();
-			int passMax = passwordValue.size();
-			int passInc = 0;
-
-			for (int i = 0; i < textField.getText().length(); i++) {
-
-				int c = (int) textField.getText().charAt(i) - passwordValue.get(passInc);
-				temp.append((char) c);
-
-				passInc++;
-				if (passInc == passMax) {
-					passInc = 0;
-				}
-
-			}
-			
 			Controller.setKey(passwordField.getText());
 
-            Controller.decrypt(temp.toString().trim());
+            Controller.decrypt(textField.getText());
 			
 			textField.setText(Controller.getDecryptedString());			
 			
@@ -178,9 +146,6 @@ public class Controller {
 			if (check < 127) {
 				textField.setEditable(true);
 			}
-
-		}
-
 	}
 
 	public void encryptFunc() throws Exception {
@@ -195,7 +160,7 @@ public class Controller {
 								
 				Controller.setKey(passwordField.getText());
 	               
-				Controller.encrypt(textField.getText().trim());
+				Controller.encrypt(textField.getText());
 				
 				String enc = Controller.getEncryptedString();
 								
@@ -203,24 +168,8 @@ public class Controller {
 
 				textField.setEditable(false);
 				textPresent = true;
-
-				StringBuilder temp = new StringBuilder();
-				int passMax = passwordValue.size();
-				int passInc = 0;
-
-				for (int i = 0; i < enc.length(); i++) {
-
-					int c = (int) enc.charAt(i) + passwordValue.get(passInc);
-					temp.append((char) c);
-
-					passInc++;
-					if (passInc == passMax) {
-						passInc = 0;
-					}
-
-				}
-								
-				textField.setText(temp.toString());
+		
+				textField.setText(enc);
 
 			}
 
@@ -235,8 +184,7 @@ public class Controller {
  
     
     public static void setKey(String myKey) throws UnsupportedEncodingException{
-    	
-   
+
     	MessageDigest sha = null;
 		try {
 			key = myKey.getBytes("UTF-8");
@@ -244,15 +192,11 @@ public class Controller {
 			key = sha.digest(key);
 	    	key = Arrays.copyOf(key, 16); // use only first 128 bit
 		    secretKey = new SecretKeySpec(key, "AES");
-		    
-		    
+
 		} catch (NoSuchAlgorithmException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-    	
-	    	  
-	
 
     }
     
