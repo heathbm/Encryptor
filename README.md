@@ -2,6 +2,12 @@
 
 A GUI charset encryptor created with JavaFX using FXML and Java SE 8.
 
+V1 Lightweight: A cyclic pattern is applied with a shift cypher to each character individually. The pattern is the size of the password.
+
+V2 Advanced: A cyclic pattern is applied with a shift cypher to each character individually. The pattern is the size of the password times 3.
+
+V3 AES: The plain text is encyphered with the AES algorithm, then the cyclic shift pattern is applied to the AES encyphered text. This is the strongest form of encyption.
+
 ---------------------------------------------------------------------
 
 Purpose: 
@@ -31,3 +37,5 @@ OS specific issues:
 - OSX: No known issues.
 - Linux: No known issues.
 - Windows: Windows notepad will not acknowledge carriage returns of files saved with the program. Instead, use wordpad.
+
+Disclaimer: This project is intended for educational purposes.
