@@ -48,8 +48,8 @@ Plain text:
 
 Enciphered once:
 
-![Alt text](/ScreenShots/encrypted1.png?raw=true "encrypted once")
+![Alt text](/ScreenShots/encrypted2.png?raw=true "encrypted once")
 
 Enciphered 5 times:
 
-![Alt text](/ScreenShots/encrypted2.png?raw=true "encrypted five times")
+![Alt text](/ScreenShots/encrypted1.png?raw=true "encrypted five times")
