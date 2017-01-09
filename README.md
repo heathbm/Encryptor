@@ -39,3 +39,17 @@ OS specific issues:
 - Windows: Windows notepad will not acknowledge carriage returns of files saved with the program. Instead, use wordpad.
 
 Disclaimer: This project is intended for educational purposes.
+
+Demonstration:
+
+Plain text:
+
+![Alt text](/ScreenShots/plain.png?raw=true "plaintext")
+
+Enciphered once:
+
+![Alt text](/ScreenShots/encrypted1.png?raw=true "encrypted once")
+
+Enciphered 5 times:
+
+![Alt text](/ScreenShots/encrypted2.png?raw=true "encrypted five times")
